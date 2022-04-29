@@ -352,7 +352,7 @@ ul {
   }
 }
 
-.landing .container .image {}
+
 
 @media(max-width:991px) {
   .landing .container .image {
@@ -705,6 +705,116 @@ ul {
 
 /* end testimonials  */
 
+/*  start team members */
+.team {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+
+}
+
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.team .container .box {
+  position: relative;
+}
+
+.team .container .box::before,
+.team .container .box::after {
+  content: "";
+  position: absolute;
+  background-color: #f3f3f3;
+  right: 0;
+  top: 0;
+  height: 100%;
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+
+.team .container .box::after {
+  z-index: -1;
+  width: 0;
+  background-color: #e4e4e4;
+}
+
+.team .container .box:hover::after {
+  width: calc(100% - 60px);
+}
+
+.team .container .box::before {
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+
+.team .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.team .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.team .box .data .social i {
+  color: #777;
+  transition: var(--main-transition);
+}
+
+.team .box .data .social a:hover i {
+  color: var(--main-color);
+}
+
+.team .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.team .box .data img {
+  width: calc(100% - 60px);
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+
+.team .box:hover img {
+  filter: grayscale(100%);
+}
+
+.team .box .info {
+  padding-left: 80px;
+}
+
+.team .info h3 {
+  margin-top: 22px;
+  margin-bottom: 0;
+  color: var(--main-color);
+  font-size: 22px;
+  transition: var(--main-transition);
+}
+
+.team .box .info p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.team .box:hover .info h3 {
+  color: #777;
+}
+
+/*  end team members  */
 /* start animation  */
 @keyframes up-and-down {
 
