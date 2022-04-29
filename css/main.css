@@ -504,6 +504,154 @@ ul {
 }
 
 /* end gallery  */
+/* strat feature  */
+.feature {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: white;
+}
+
+.feature .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.feature .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.feature .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature .box .img-holder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.feature .box .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 160px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+  z-index: 3;
+}
+
+.feature .box:hover .img-holder::after {
+  border-width: 160px 500px 160px 0px;
+}
+
+.feature .box .img-holder img {
+  max-width: 100%;
+}
+
+.feature .box h2 {
+  position: relative;
+  font-size: 40px;
+  margin: auto;
+  width: fit-content;
+}
+
+.feature .box h2::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 15px;
+  height: 5px;
+  width: calc(100% - 30px);
+}
+
+.feature .box p {
+  line-height: 2;
+  font: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  color: #777;
+}
+
+.feature .box a {
+  display: block;
+  border: 3px solid;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: var(--main-transition);
+}
+
+.feature .Quality .img-holder::before {
+  background-color: rgb(244 64 54 / 60%);
+}
+
+.feature .Quality h2::after {
+  background-color: rgb(244 64 54);
+}
+
+.feature .Quality a {
+  border-color: rgb(244 64 54);
+  color: rgb(244 64 54);
+  background: linear-gradient(to right, rgb(244 64 54) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.feature .Passion .img-holder::before {
+  background-color: rgb(3 169 244 / 60%);
+}
+
+.feature .Passion h2::after {
+  background-color: rgb(3 169 244);
+}
+
+.feature .Passion a {
+  border-color: rgb(3 169 244);
+  color: rgb(3 169 244);
+  background: linear-gradient(to right, rgb(3 169 244) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.feature .Time .img-holder::before {
+  background-color: rgb(0 150 136 / 60%);
+}
+
+.feature .Time h2::after {
+  background-color: rgb(0 150 136);
+}
+
+.feature .Time a {
+  border-color: rgb(0 150 136);
+  color: rgb(0 150 136);
+
+  background: linear-gradient(to right, rgb(0 150 136) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.feature .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
+
+/* end feature  */
+
+
 /* start animation  */
 @keyframes up-and-down {
 
